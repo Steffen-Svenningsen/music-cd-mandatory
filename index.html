@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music CD's</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/mojocss"></script>
 </head>
-<body>
+<body class="d-flex flex-col j-content-center a-items-center pa-4 box-s-border">
+    <header class="mt-6 mb-4">
+        <h1>Music CDs</h1>
+    </header>
+    <main>
+        <section class="border-1 border-c-white:-16 bg-c-white:-4 rounded-sm pa-4 box-s-border">
+            <form id="cdForm" class="d-flex flex-col gap-4">
+                <div class="d-flex j-content-between a-items-center gap-8">
+                    <label for="author">Author</label>
+                    <input class="outline-1 outline-c-black:+16 rounded-2 pa-1 flex-auto max-w-(70%)" type="text" id="author" required>
+                </div>
+                <div class="d-flex j-content-between a-items-center gap-8">
+                    <label for="title">Title</label>
+                    <input class="outline-1 outline-c-black:+16 rounded-2 pa-1 flex-auto max-w-(70%)" type="text" id="title" required>
+                </div>
+                <div class="d-flex j-content-between a-items-center gap-8">
+                    <label for="year">Year</label>
+                    <input class="outline-1 outline-c-black:+16 rounded-2 pa-1" type="number" id="year" min="0" required>
+                </div>
+                <button type="submit" class="bg-c-green:+8 text-c-white py-2 px-4 rounded-4 cursor-pointer ts-200 w-fit-content" hover="bg-c-invert:+8">Add my CD</button>
+            </form>
+        </section>
+        <section class="mt-8 border-1 border-c-white:-16 bg-c-white:-4 rounded-sm box-s-border pa-2">
+            <table id="table" class="w-full">
+                <thead>
+                    <tr class="text-c-green:+8">
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
     <!-- Initialize Mojo CSS -->
     <script>
         mojo();
