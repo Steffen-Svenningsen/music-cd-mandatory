@@ -1,14 +1,15 @@
 'use strict'
 
-// Create/get needed variables
+// Create/get needed variables "import html elements we need"
 const tableBody = document.querySelector('#table tbody')
 const authorInput = document.getElementById('author')
 const titleInput = document.getElementById('title')
 const yearInput = document.getElementById('year')
 const form = document.getElementById('cdForm')
 
+// Create an event listener on the form looking for a submit
 form.addEventListener('submit', function(event) {
-    // Prevent form submission
+    // Prevent default form submission
     event.preventDefault()
 
     // Get the values from the input fields
@@ -22,7 +23,7 @@ form.addEventListener('submit', function(event) {
         <td>${author}</td>
         <td>${title}</td>
         <td>${year}</td>
-        <td><button class="deleteBtn bg-c-red:+8 text-c-white px-2 rounded-sm cursor-pointer">X</button></td>
+        <td><button class="delete-btn">X</button></td>
     `
     
     // Insert the new row at the top of the tableBody (tbody)
@@ -34,7 +35,7 @@ form.addEventListener('submit', function(event) {
     yearInput.value = ''
 
     // Delete button
-    const deleteButtons = document.querySelectorAll('.deleteBtn')
+    const deleteButtons = document.querySelectorAll('.delete-btn')
     deleteButtons.forEach(button => {
         button.addEventListener('click', function() {
              // Remove the row

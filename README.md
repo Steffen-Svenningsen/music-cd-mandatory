@@ -1,6 +1,6 @@
 # Music CD Mandatory Assignment
 
-Simple mandatory school project where the user can add an album to the table and delete it from the table. Built using plain JavaScript, HTML and CSS/Mojocss.
+Simple mandatory school project where the user can add an album to the table and delete it from the table. Built using plain JavaScript, HTML and CSS.
 
 ## Live Preview
 
